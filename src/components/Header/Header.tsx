@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   HeaderContainer,
   List,
@@ -6,22 +6,24 @@ import {
   ListContainer,
   Logo,
   ProfileMenu,
+  Anchor,
 } from "./style";
 import DisneyImg from "../../assets/disney-plus.svg";
 import HomeImg from "../../assets/home.svg";
-import SearchImg from "../../assets/search.svg"
-import StarImg from '../../assets/star.svg'
-import SeriesImg from "../../assets/series.svg"
-import MoviesImg from "../../assets/film_reel.svg"
-import WatchlistImg from "../../assets/plus.svg"
+import SearchImg from "../../assets/search.svg";
+import StarImg from "../../assets/star.svg";
+import SeriesImg from "../../assets/series.svg";
+import MoviesImg from "../../assets/film_reel.svg";
+import WatchlistImg from "../../assets/plus.svg";
 import { Link } from "react-router-dom";
 
-
 interface Props {
-  blueHeader: boolean
+  blueHeader: boolean;
 }
 
-const Header: React.FC<Props> = ({blueHeader}) => {
+const Header: React.FC<Props> = ({ blueHeader }) => {
+  const [show, setShow] = useState<boolean>(false);
+
   return (
     <HeaderContainer blueHeader={blueHeader}>
       <ListContainer>
@@ -34,16 +36,16 @@ const Header: React.FC<Props> = ({blueHeader}) => {
             <Link to="/home">HOME</Link>
           </ListItem>
           <ListItem>
-              <img src={SearchImg} alt="" />
-            <Link to="/">SEARCH</Link>
+            <img src={SearchImg} alt="" />
+            <Link to="/search">SEARCH</Link>
           </ListItem>
           <ListItem>
             <img src={WatchlistImg} alt="" />
-            <Link to="/">WATCHLIST</Link>
+            <Link to="/home">WATCHLIST</Link>
           </ListItem>
           <ListItem>
             <img width="18" src={StarImg} alt="" />
-            <Link to="/">ORIGINALS</Link>
+            <Link to="/home">ORIGINALS</Link>
           </ListItem>
           <ListItem>
             <img src={MoviesImg} alt="" />
@@ -55,7 +57,22 @@ const Header: React.FC<Props> = ({blueHeader}) => {
           </ListItem>
         </List>
       </ListContainer>
-      <ProfileMenu />
+      <ProfileMenu
+        onMouseOver={() => setShow(true)}
+        onMouseLeave={() => setShow(false)}
+      >
+        @Gustavo Kuhl
+        {show === true && (
+          <>
+            <Anchor href="https://github.com/Gustavo-Kuhl" target="_blank">
+              Github
+            </Anchor>
+            <Anchor href="https://www.linkedin.com/in/gustavo-kuhl/" target="_blank">
+              Linkedin
+            </Anchor>
+          </>
+        )}
+      </ProfileMenu>
     </HeaderContainer>
   );
 };

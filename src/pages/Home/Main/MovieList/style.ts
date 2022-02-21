@@ -59,6 +59,7 @@ export const ListItem = styled.li`
     border: 2px solid transparent;
     cursor: pointer;
     box-shadow: 0 10px 15px -5px #000;
+    min-width: 20%;
 
     &:hover {
       border: 2px solid #fff;

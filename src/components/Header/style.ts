@@ -8,6 +8,7 @@ export const HeaderContainer = styled.header<Props>`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   padding: 0 2rem;
   position: sticky;
   transition: .5s;
@@ -63,9 +64,39 @@ export const Logo = styled.img`
 `;
 
 export const ProfileMenu = styled.div`
-  border: 1px solid #000;
-  border-radius: 50%;
-  background: #399fee;
-  width: 50px;
-  height: 50px;
+  width: 200px;
+  /* height: 100%; */
+  padding: 1.8rem;
+  position: absolute;
+  transition: .4s;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  font-size: 1.2rem;
+  top: 0;
+  color: #777;
+  overflow: hidden;
+
+  &:hover {
+    border: 1px solid #555;
+    background: #111;
+    height: 180px;
+    right: 0;
+    top: 0;
+  }
 `;
+
+export const Anchor = styled.a`
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+  color: #777;
+
+  &:hover {
+    color: #fff;
+  }
+`

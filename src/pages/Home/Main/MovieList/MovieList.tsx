@@ -63,7 +63,7 @@ export const MovieList: React.FC<Props> = ({ title, items }) => {
               <ListItem key={movie.id}>
                 <img
                   src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-                  alt=""
+                  alt="movie"
                 />
               </ListItem>
             ))}

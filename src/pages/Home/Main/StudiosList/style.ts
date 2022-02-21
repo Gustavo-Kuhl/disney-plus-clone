@@ -4,6 +4,7 @@ export const StudiosListContainer = styled.section`
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 `
 
 export const StudioCard = styled.div`
@@ -12,6 +13,7 @@ export const StudioCard = styled.div`
     border-radius: .5rem;
     margin: 1rem;
     box-shadow: 0 15px 10px -7px #000;
+    min-width: 250px;
     transition: .3s;
     display: flex;
     justify-content: center;
@@ -22,5 +24,9 @@ export const StudioCard = styled.div`
 
     &:hover {
         transform: scale(105%);
+    }
+
+    img {
+        min-width: 200px;
     }
 `

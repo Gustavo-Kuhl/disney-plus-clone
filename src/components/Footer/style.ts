@@ -17,6 +17,7 @@ export const Logo = styled.img`
 export const TextLine = styled.div`
     display: block;
     margin: .5rem;
+    text-align: center;
 
     span {
         margin: 1rem

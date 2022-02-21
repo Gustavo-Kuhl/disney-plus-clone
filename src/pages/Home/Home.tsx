@@ -49,7 +49,6 @@ const Home: React.FC = () => {
           ))}
         </section>
       </MainContainer>
-      <Footer />
     </>
   );
 };
