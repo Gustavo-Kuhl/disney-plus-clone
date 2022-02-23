@@ -4,7 +4,7 @@ import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
 import { Loading } from "./style";
 
-import { Carousel } from "./Main/Carousel/Carousel";
+import { CarouselComponent } from "./Main/Carousel/Carousel";
 import { MovieList } from "./Main/MovieList/MovieList";
 import { StudiosList } from "./Main/StudiosList/StudiosList";
 import { MainContainer } from "./style";
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
     <>
       <MainContainer>
         {moviesList.length <= 0 ? <Loading /> : ""}
-        <Carousel />
+        <CarouselComponent />
         <StudiosList />
         <section>
           {moviesList.map((movie, key) => (

@@ -9,6 +9,7 @@ import { Series } from "./pages/Series/Series";
 import { Header } from "./components/Header/Header";
 import { Search } from "./pages/Search/Search";
 import { Footer } from "./components/Footer/Footer";
+import { Watchlist } from "./pages/Watchlist/Watchlist";
 
 const App: React.FC = () => {
   const [isLogged, setIsLogged] = useState<boolean>(true);
@@ -34,6 +35,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Login />} />
           {isLogged && <Route path="/home" element={<Home />} />}
           {isLogged && <Route path="/search" element={<Search />} />}
+          {isLogged && <Route path="/watchlist" element={<Watchlist />} />}
           {isLogged && <Route path="/movies" element={<Movies />} />}
           {isLogged && <Route path="/series" element={<Series />} />}
           <Route path="*" element={<ErrorPage />} />

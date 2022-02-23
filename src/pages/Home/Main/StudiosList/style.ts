@@ -29,4 +29,8 @@ export const StudioCard = styled.div`
     img {
         min-width: 200px;
     }
+
+    @media (max-width: 570px) {
+        width: 100%;
+    }
 `

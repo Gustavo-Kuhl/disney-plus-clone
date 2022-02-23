@@ -11,38 +11,38 @@ export const getMovieList = async () => {
   return [
     {
       category: "originals",
-      title: "Originais do Disney Plus ",
+      title: "Originals",
       items: await apiFetch(
         `/discover/tv?with_network=213&language=pt-BR&api_key=${KEY}`
       ),
     },
     {
       category: "trending",
-      title: "Recomendados para voce",
+      title: "Trending",
       items: await apiFetch(`/trending/all/week?language=pt-BR&api_key=${KEY}`),
     },
     {
       category: "toprated",
-      title: "Em alta",
+      title: "Top rated",
       items: await apiFetch(`/movie/top_rated?language=pt-BR&api_key=${KEY}`),
     },
     {
       category: "action",
-      title: "Ação",
+      title: "Action",
       items: await apiFetch(
         `/discover/movie?with_genres=28&language=pt-BR&api_key=${KEY}`
       ),
     },
     {
       category: "comedy",
-      title: "Comédia",
+      title: "Comedy",
       items: await apiFetch(
         `/discover/movie?with_genres=35&language=pt-BR&api_key=${KEY}`
       ),
     },
     {
       category: "horror",
-      title: "Terror",
+      title: "Horror",
       items: await apiFetch(
         `/discover/movie?with_genres=27&language=pt-BR&api_key=${KEY}`
       ),
@@ -56,7 +56,7 @@ export const getMovieList = async () => {
     },
     {
       category: "documentary",
-      title: "Documentário",
+      title: "Documentary",
       items: await apiFetch(
         `/discover/movie?with_genres=99&language=pt-BR&api_key=${KEY}`
       ),

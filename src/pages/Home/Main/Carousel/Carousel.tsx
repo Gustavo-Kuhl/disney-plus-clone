@@ -1,42 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { CarouselContainer, CarouselListArea, List, ListItem } from "./style";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 
-import disney from "../../../../assets/disney-logo.svg"
+import { Swiper, SwiperSlide } from "swiper/react";
 
-const Carousel = () => {
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { Image } from "./style";
 
-    const [move, setMove] = useState<number>(0)
-    const items = [1, 2, 3, 4, 5]
-    
-    let index = 0
-    
-    function moveCarousel() {
-        index++
-        
-        if (index > items.length - 1) {
-            index = 0
-        }
-        
-    }
+import disney from "../../../../assets/disney-logo.svg";
+import starwars from "../../../../assets/star-wars.svg"
+import pixar from "../../../../assets/pixar.svg"
 
-    setInterval(moveCarousel, 2000)
- 
-    return (
-        <CarouselContainer>
-            <CarouselListArea>
-                <List style={{marginLeft: -1000}}>
-                    {items.map((item) => {
-                        return (
-                            <ListItem>
-                                <img src={disney} alt="" />
-                                {item}
-                            </ListItem>
-                        )
-                    })}
-                </List>
-            </CarouselListArea>
-        </CarouselContainer>
-    )
-}
+const CarouselComponent = () => {
+  return (
+    <Swiper
+      modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      slidesPerView={1}
+      autoplay={{ delay: 1500 }}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log("slide change")}
+    >
+      <SwiperSlide>
+        <Image src={disney} alt="" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src={starwars} alt="" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image src={pixar} alt="" />
+      </SwiperSlide>
+    </Swiper>
+  );
+};
 
-export { Carousel }
+export { CarouselComponent };

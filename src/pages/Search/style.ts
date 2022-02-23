@@ -18,12 +18,12 @@ export const Input = styled.input`
 `;
 
 export const SearchListContainer = styled.section`
-  padding: 2rem;
+  padding: 2rem 1rem;
 
   h4 {
     font-size: 1.2rem;
     font-weight: 400;
-    margin-left: 5rem;
+    margin-left: 2rem;
   }
 `;
 
@@ -44,8 +44,10 @@ export const ResultItem = styled.li`
     border: 2px solid transparent;
     cursor: pointer;
     box-shadow: 0 10px 15px -5px #000;
-    min-width: 20%;
-    min-width: 50%;
+    display: block;
+    object-fit: cover;
+    width: 330px;
+    height: 200px;
 
     &:hover {
       border: 2px solid #fff;

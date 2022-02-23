@@ -1,11 +1,11 @@
 import React from "react"
+import { ErrorContainer } from "./style"
 
 const ErrorPage = () => {
     return (
-        <div>
+        <ErrorContainer>
             <h1>Error 404</h1>
-            <p>Page not found!</p>
-        </div>
+        </ErrorContainer>
     )
 }
 

@@ -41,7 +41,7 @@ const Header: React.FC<Props> = ({ blueHeader }) => {
           </ListItem>
           <ListItem>
             <img src={WatchlistImg} alt="" />
-            <Link to="/home">WATCHLIST</Link>
+            <Link to="/watchlist">WATCHLIST</Link>
           </ListItem>
           <ListItem>
             <img width="18" src={StarImg} alt="" />

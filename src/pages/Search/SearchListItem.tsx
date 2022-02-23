@@ -27,7 +27,7 @@ export const SearchListItem: React.FC<Props> = ({ items, input }) => {
         return (
           <ResultItem key={item.id}>
             <img
-              src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
+              src={`https://image.tmdb.org/t/p/original/${item.poster_path}`}
               alt={`movie or serie image: ${item.name}`}
             />
           </ResultItem>

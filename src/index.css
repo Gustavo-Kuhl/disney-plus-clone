@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-html, body {
+html, body, #root {
   color: #fff;
   background-color: #1a1d29;
   font-family: "Poppins", "Roboto", sans-serif;

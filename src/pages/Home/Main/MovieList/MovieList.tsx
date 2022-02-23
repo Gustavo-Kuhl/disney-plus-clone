@@ -38,7 +38,7 @@ export const MovieList: React.FC<Props> = ({ title, items }) => {
     // Pegando metade da tela para poder fazer a rolagem
     let x =  scrollX - Math.round(window.innerWidth / 2);
 
-    let listWidth = items!.results!.length * 240
+    let listWidth = items!.results!.length * 367
 
     if ((window.innerWidth - listWidth) > x) {
       x = (window.innerWidth - listWidth) + 20
@@ -62,7 +62,7 @@ export const MovieList: React.FC<Props> = ({ title, items }) => {
             items.results.map((movie) => (
               <ListItem key={movie.id}>
                 <img
-                  src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                   alt="movie"
                 />
               </ListItem>

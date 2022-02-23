@@ -20,13 +20,12 @@ export const NavigateButton = styled.div<INavigateButtonProps>`
   user-select: none;
   width: 70px;
   font-size: 3rem;
-  height: 350px;
+  height: 230px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   z-index: 99;
-  /* top: 14%; */
   left: ${(props) => (props.left ? 0 : null)};
   right: ${(props) => (props.right ? 0 : null)};
   cursor: pointer;
@@ -55,12 +54,16 @@ export const ListItem = styled.li`
   padding: 0 1rem;
 
   img {
-    border-radius: 1rem;
+    border-radius: .5rem;
     border: 2px solid transparent;
     cursor: pointer;
     box-shadow: 0 10px 15px -5px #000;
-    min-width: 20%;
-
+    display: block;
+    min-width: 250px;
+    /* min-heig */
+    width: 330px;
+    height: 200px;
+    object-fit: cover;
     &:hover {
       border: 2px solid #fff;
     }
