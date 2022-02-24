@@ -7,22 +7,6 @@ import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { LoginContainer, Button } from "./style";
 import disneyLogo from "../../assets/disney-plus.svg";
 
-// Implement localstorage verfify login
-
-// export const handleLocalStorage = {
-//   setLocalStorage: (email: string, emailVerified: boolean) => {
-//     localStorage.setItem("account", JSON.stringify({email, emailVerified}))
-//   },
-//   getLocalStorage: () => {
-//     if (localStorage.getItem("account") != null) {
-//       return JSON.parse(localStorage.getItem("account"))
-//     } else {
-//       return "err"
-//     }
-    
-//   }
-// }
-
 const Login = () => {
 
   const {setIsLogged}= useContext(LoginContext);
@@ -36,7 +20,6 @@ const Login = () => {
         if (res.user.emailVerified === true) {
           setIsLogged(true)
           navigate("/home");
-          // handleLocalStorage.setLocalStorage(res.user.email!, res.user.emailVerified)
         } else {
           console.log("user not authenticated!");
           setIsLogged(false)

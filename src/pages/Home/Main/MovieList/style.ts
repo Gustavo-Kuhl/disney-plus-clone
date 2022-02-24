@@ -59,11 +59,16 @@ export const ListItem = styled.li`
     cursor: pointer;
     box-shadow: 0 10px 15px -5px #000;
     display: block;
-    min-width: 250px;
-    /* min-heig */
+    
     width: 330px;
     height: 200px;
     object-fit: cover;
+    
+    @media(max-width: 768px) {
+      width: 110px;
+      height: 150px;
+    }
+
     &:hover {
       border: 2px solid #fff;
     }

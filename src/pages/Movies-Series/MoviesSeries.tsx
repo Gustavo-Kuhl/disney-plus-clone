@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { MoviesContainer, MoviesSection, Option, Select, Image } from './style'
+import { MoviesContainer, MoviesList, Option, Select, Image } from './style'
 import { getMovieList } from '../../API/api'
 
 interface IMovies {
@@ -18,7 +18,11 @@ interface IMovies {
       };
 }
 
-export const Movies: React.FC = () => {
+interface Props {
+    title: string
+}
+
+export const MoviesSeries: React.FC<Props> = ({title}) => {
 
     const [movies, setMovies] = useState<IMovies[]>()
     const [selected, setSelected] = useState<string>("Top rated")
@@ -37,7 +41,7 @@ export const Movies: React.FC = () => {
     return (
         <MoviesContainer>
             <div style={{display: "flex"}}>
-                <h2>Movies</h2>
+                <h2>{title}</h2>
                 
                 <Select onChange={({target}) => setSelected(target.value)}>
                     <Option value="Top rated">Top rated</Option>
@@ -46,7 +50,7 @@ export const Movies: React.FC = () => {
                     <Option value="Comedy">Comedy</Option>
                 </Select>
             </div>
-            <MoviesSection>
+            <MoviesList>
                 {movies?.map(movie => {
                     return (
                         <>
@@ -62,7 +66,7 @@ export const Movies: React.FC = () => {
                         </>
                     )
                 })}
-            </MoviesSection>
+            </MoviesList>
         </MoviesContainer>
     )
 }

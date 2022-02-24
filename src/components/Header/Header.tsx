@@ -3,10 +3,10 @@ import {
   HeaderContainer,
   List,
   ListItem,
-  ListContainer,
+  Nav,
   Logo,
   ProfileMenu,
-  Anchor,
+  Anchor
 } from "./style";
 import DisneyImg from "../../assets/disney-plus.svg";
 import HomeImg from "../../assets/home.svg";
@@ -16,6 +16,7 @@ import SeriesImg from "../../assets/series.svg";
 import MoviesImg from "../../assets/film_reel.svg";
 import WatchlistImg from "../../assets/plus.svg";
 import { Link } from "react-router-dom";
+import { BurgerMenu } from "./BurgerMenu";
 
 interface Props {
   blueHeader: boolean;
@@ -23,11 +24,14 @@ interface Props {
 
 const Header: React.FC<Props> = ({ blueHeader }) => {
   const [show, setShow] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(false)
 
   return (
     <HeaderContainer blueHeader={blueHeader}>
-      <ListContainer>
-        <List>
+      {console.log(open)}
+      
+      <Nav>
+        <List open={open}>
           <ListItem>
             <Logo src={DisneyImg} />
           </ListItem>
@@ -56,7 +60,10 @@ const Header: React.FC<Props> = ({ blueHeader }) => {
             <Link to="/series">SERIES</Link>
           </ListItem>
         </List>
-      </ListContainer>
+      </Nav>
+
+      <BurgerMenu open={open} setOpen={setOpen} />
+
       <ProfileMenu
         onMouseOver={() => setShow(true)}
         onMouseLeave={() => setShow(false)}

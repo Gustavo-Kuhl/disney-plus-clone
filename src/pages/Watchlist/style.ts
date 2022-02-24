@@ -7,6 +7,7 @@ export const WatchlistContainer = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   img {
     min-width: 80px;
@@ -15,5 +16,9 @@ export const WatchlistContainer = styled.main`
     border-radius: 50%;
     padding: 1rem;
     margin: 1rem;
+  }
+
+  p {
+    padding: 1rem;
   }
 `

@@ -10,7 +10,7 @@ export const CarouselContainer = styled.section`
 
 export const Image = styled.img`
   width: 100%;
-  height: 400px;
+  height: 500px;
 `
 
 export const CarouselListArea = styled.div`

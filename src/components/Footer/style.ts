@@ -24,7 +24,11 @@ export const TextLine = styled.div`
     }
 `
 export const TextBox = styled.div`
-    width: 500px;
+    width: 400px;
     margin: 1rem;
     text-align: center;
+
+    @media (max-width: 450px) {
+        width: 280px;
+    }
 `

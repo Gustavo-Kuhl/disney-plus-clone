@@ -1,7 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getMovieList } from "../../API/api";
-import { Footer } from "../../components/Footer/Footer";
-import { Header } from "../../components/Header/Header";
 import { Loading } from "./style";
 
 import { CarouselComponent } from "./Main/Carousel/Carousel";

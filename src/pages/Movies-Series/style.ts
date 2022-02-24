@@ -2,13 +2,18 @@ import styled from "styled-components";
 
 export const MoviesContainer = styled.main`
   padding: 2rem 5rem;
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
 
   h2 {
     font-size: 2rem;
-    padding: 0 3.5rem;
+    margin-right: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
   }
 `;
 
@@ -26,24 +31,31 @@ export const Option = styled.option`
   background: #111;
 `;
 
-export const MoviesSection = styled.section`
+export const MoviesList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-`
+`;
 
 export const Image = styled.img`
-  object-fit: cover;
-  margin: .5rem;
-  border-radius: .5rem;
+  margin: 1rem 0.2rem;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -5px #000;
   display: block;
+
   width: 320px;
   height: 200px;
-  border: 1px solid transparent;
-  cursor: pointer;
+  object-fit: cover;
+
+  @media (max-width: 1150px) {
+    width: 110px;
+    height: 150px;
+  }
 
   &:hover {
-    border: 1px solid #aaa;
+    border: 2px solid #fff;
   }
-`
+`;

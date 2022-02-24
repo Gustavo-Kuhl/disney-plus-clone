@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const SearchContainer = styled.main`
-  min-height: calc(100vh - 250px);
 `;
 
 export const Input = styled.input`
@@ -13,8 +12,13 @@ export const Input = styled.input`
   border: none;
   color: rgb(249, 249, 249);
   position: sticky;
-  top: 75px;
+  top: 65px;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
 `;
 
 export const SearchListContainer = styled.section`
@@ -40,14 +44,20 @@ export const ResultItem = styled.li`
   padding: 1rem;
 
   img {
-    border-radius: 1rem;
+    border-radius: .5rem;
     border: 2px solid transparent;
     cursor: pointer;
     box-shadow: 0 10px 15px -5px #000;
     display: block;
-    object-fit: cover;
+    
     width: 330px;
     height: 200px;
+    object-fit: cover;
+    
+    @media(max-width: 768px) {
+      width: 110px;
+      height: 150px;
+    }
 
     &:hover {
       border: 2px solid #fff;

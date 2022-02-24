@@ -7,7 +7,7 @@ export const Watchlist: React.FC = () => {
     <WatchlistContainer>
       <img src={plus} alt="" />
       <h3>Your watchlist is empty</h3>
-      <p>Contend you add to your watchlist will appear here</p>
+      <p>Content you add to your watchlist will appear here</p>
     </WatchlistContainer>
   );
 };

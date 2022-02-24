@@ -4,8 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Login } from "./pages/Login/Login";
 import { Home } from "./pages/Home/Home";
 import { ErrorPage } from "./pages/Error/Error";
-import { Movies } from "./pages/Movies/Movies";
-import { Series } from "./pages/Series/Series";
+import { MoviesSeries } from "./pages/Movies-Series/MoviesSeries";
 import { Header } from "./components/Header/Header";
 import { Search } from "./pages/Search/Search";
 import { Footer } from "./components/Footer/Footer";
@@ -36,8 +35,8 @@ const App: React.FC = () => {
           {isLogged && <Route path="/home" element={<Home />} />}
           {isLogged && <Route path="/search" element={<Search />} />}
           {isLogged && <Route path="/watchlist" element={<Watchlist />} />}
-          {isLogged && <Route path="/movies" element={<Movies />} />}
-          {isLogged && <Route path="/series" element={<Series />} />}
+          {isLogged && <Route path="/movies" element={<MoviesSeries title="Movies" />} />}
+          {isLogged && <Route path="/series" element={<MoviesSeries title="Series" />} />}
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

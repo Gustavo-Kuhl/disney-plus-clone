@@ -1,30 +1,47 @@
 import styled from "styled-components";
 
 interface Props {
-  blueHeader: boolean
+  blueHeader?: boolean;
+  open?: boolean
 }
 
 export const HeaderContainer = styled.header<Props>`
   display: flex;
-  justify-content: space-between;
+  padding: 1rem 2rem;
   align-items: center;
-  position: relative;
-  padding: 0 2rem;
-  position: sticky;
-  transition: .5s;
-  background: ${props => props.blueHeader ? "#090b13" : "linear-gradient(to bottom, #000, transparent)"};
-  z-index: 999;
+  height: 70px;
+  transition: 0.5s;
+  background: ${(props) =>
+    props.blueHeader
+      ? "#090b13"
+      : "linear-gradient(to bottom, #000, transparent)"};
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
   top: 0;
 `;
 
-export const ListContainer = styled.nav`
-    padding: .2rem;
+export const Nav = styled.nav`
+  padding: 0.2rem;
 `;
 
-export const List = styled.ul`
+export const List = styled.ul<Props>`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-flow: row nowrap;
+
+  @media (max-width: 1100px) {
+    flex-flow: column;
+    background: #090b13;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width:60%;
+    font-size: 1.5rem;
+    padding-top: 4rem;
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+    transition: .3s;
+  }
 `;
 
 export const ListItem = styled.li`
@@ -35,27 +52,26 @@ export const ListItem = styled.li`
   align-items: center;
 
   a {
-      margin: .5rem;
-      position: relative;
-      
-      &:before {
-        content: "";
-        background: #fff;
-        transition: .3s;
-        position: absolute;
-        width: 0px;
-        height: 2px;
-        bottom: 0;
-      }
+    margin: 0.5rem;
+    position: relative;
 
-      &:hover::before {
-        width: 100%;
-      }
+    &:before {
+      content: "";
+      background: #fff;
+      transition: 0.3s;
+      position: absolute;
+      width: 0px;
+      height: 2px;
+      bottom: 0;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
   }
 
-  @media(max-width: 1100px) {
-    &:nth-child(n+2) {display: none}
-    
+  @media (max-width: 1100px) {
+    padding: .5rem;
   }
 `;
 
@@ -65,10 +81,8 @@ export const Logo = styled.img`
 
 export const ProfileMenu = styled.div`
   width: 200px;
-  /* height: 100%; */
-  padding: 1.8rem;
   position: absolute;
-  transition: .4s;
+  transition: 0.4s;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -78,13 +92,14 @@ export const ProfileMenu = styled.div`
   border: 1px solid transparent;
   font-size: 1.2rem;
   top: 0;
+  bottom: 0;
   color: #777;
   overflow: hidden;
 
   &:hover {
     border: 1px solid #555;
     background: #111;
-    height: 180px;
+    height: 160px;
     right: 0;
     top: 0;
   }
@@ -99,4 +114,4 @@ export const Anchor = styled.a`
   &:hover {
     color: #fff;
   }
-`
+`;
