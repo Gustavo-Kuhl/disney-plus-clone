@@ -10,15 +10,19 @@ export const HeaderContainer = styled.header<Props>`
   padding: 1rem 2rem;
   align-items: center;
   height: 70px;
-  transition: 0.5s;
+  transition: 0.2s ease-in-out;
   background: ${(props) =>
     props.blueHeader
       ? "#090b13"
       : "linear-gradient(to bottom, #000, transparent)"};
   z-index: 9999;
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 0;
+
+  @media (max-width: 1150px) {
+    background: #090b13;
+  }
 `;
 
 export const Nav = styled.nav`

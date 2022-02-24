@@ -8,6 +8,7 @@ export const FooterContainer = styled.footer`
     background: #090b13;
     padding: 1rem;
     font-size: .8rem;
+    width: 100%;
 `
 
 export const Logo = styled.img`

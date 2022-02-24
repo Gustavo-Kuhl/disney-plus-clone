@@ -6,12 +6,7 @@ import {
   SearchList,
 } from "./style";
 import { getMovieList } from "../../API/api";
-import { MovieList } from "../Home/Main/MovieList/MovieList";
 import { SearchListItem } from "./SearchListItem";
-
-interface IInput {
-  target: string;
-}
 
 interface IMovieList {
   category?: string;
@@ -51,7 +46,6 @@ export const Search: React.FC = () => {
 
 
       <SearchListContainer>
-        <h4>Explore</h4>
         <SearchList>
           {moviesList.map((movie, index) => {
             return (

@@ -5,7 +5,6 @@ import { Loading } from "./style";
 import { CarouselComponent } from "./Main/Carousel/Carousel";
 import { MovieList } from "./Main/MovieList/MovieList";
 import { StudiosList } from "./Main/StudiosList/StudiosList";
-import { MainContainer } from "./style";
 
 interface IMovieList {
   category?: string;
@@ -37,7 +36,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <MainContainer>
+      <main>
         {moviesList.length <= 0 ? <Loading /> : ""}
         <CarouselComponent />
         <StudiosList />
@@ -46,7 +45,7 @@ const Home: React.FC = () => {
             <MovieList key={key} title={movie.title} items={movie.items} />
           ))}
         </section>
-      </MainContainer>
+      </main>
     </>
   );
 };

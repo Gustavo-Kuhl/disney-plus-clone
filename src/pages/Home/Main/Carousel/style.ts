@@ -60,7 +60,6 @@ export const NavigateButton = styled.div<INavigateButtonProps>`
   align-items: center;
   color: #fff;
   z-index: 99;
-  /* top: 14%; */
   left: ${(props) => (props.left ? 0 : null)};
   right: ${(props) => (props.right ? 0 : null)};
   cursor: pointer;

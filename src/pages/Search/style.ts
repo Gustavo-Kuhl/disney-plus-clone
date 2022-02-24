@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SearchContainer = styled.main`
+  min-height: 70vh;
 `;
 
 export const Input = styled.input`
@@ -23,38 +24,31 @@ export const Input = styled.input`
 
 export const SearchListContainer = styled.section`
   padding: 2rem 1rem;
-
-  h4 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-left: 2rem;
-  }
+  margin-top: 2rem;
 `;
 
 export const SearchList = styled.ul`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 export const ResultItem = styled.li`
-  display: flex;
   transition: 0.3s;
-  padding: 1rem;
-
+  
   img {
-    border-radius: .5rem;
+    margin: 1rem 0.2rem;
+    border-radius: 0.5rem;
     border: 2px solid transparent;
     cursor: pointer;
     box-shadow: 0 10px 15px -5px #000;
     display: block;
-    
-    width: 330px;
+    width: 320px;
     height: 200px;
     object-fit: cover;
-    
-    @media(max-width: 768px) {
+
+    @media (max-width: 1150px) {
       width: 110px;
       height: 150px;
     }

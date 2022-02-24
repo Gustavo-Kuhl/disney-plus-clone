@@ -11,7 +11,7 @@ import { Footer } from "./components/Footer/Footer";
 import { Watchlist } from "./pages/Watchlist/Watchlist";
 
 const App: React.FC = () => {
-  const [isLogged, setIsLogged] = useState<boolean>(true);
+  const [isLogged, setIsLogged] = useState<boolean>(false);
   const [blueHeader, setBlueHeader] = useState<boolean>(false);
 
   useEffect(() => {

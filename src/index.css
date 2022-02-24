@@ -9,8 +9,12 @@ html, body, #root {
   background-color: #1a1d29;
   font-family: "Poppins", "Roboto", sans-serif;
   width: 100%;
-  height: 100%;
   user-select: none;
+}
+
+#root {
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 ::-webkit-scrollbar {

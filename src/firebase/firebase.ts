@@ -2,13 +2,13 @@ import {initializeApp} from 'firebase/app'
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDdXnY8G8gjYPX6mb1eAifbdJO35UTQH6U",
-  authDomain: "disney-plus-clone-37535.firebaseapp.com",
-  projectId: "disney-plus-clone-37535",
-  storageBucket: "disney-plus-clone-37535.appspot.com",
-  messagingSenderId: "96678698900",
-  appId: "1:96678698900:web:a6dc8009c8b466e0297981"
-};
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY?.toString(),
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN?.toString(),
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID?.toString(),
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET?.toString(),
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID?.toString(),
+  appId: import.meta.env.VITE_FIREBASE_APP_ID?.toString()
+}
 
 const app = initializeApp(firebaseConfig)
 

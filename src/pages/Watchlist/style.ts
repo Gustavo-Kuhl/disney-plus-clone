@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const WatchlistContainer = styled.main`
   width: 100%;
-  height: 58.8%;
+  height: 100%;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

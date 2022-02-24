@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,7 +13,7 @@ import disney from "../../../../assets/disney-logo.svg";
 import starwars from "../../../../assets/star-wars.svg"
 import pixar from "../../../../assets/pixar.svg"
 
-const CarouselComponent = () => {
+const CarouselComponent: React.FC = () => {
   return (
     <Swiper
       modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}

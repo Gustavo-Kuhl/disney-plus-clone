@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.main`
-
-`
-
 export const Loading = styled.div`
   position: fixed;
   left: 0;

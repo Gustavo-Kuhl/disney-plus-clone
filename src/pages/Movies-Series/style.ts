@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const MoviesContainer = styled.main`
   padding: 2rem 5rem;
-  margin-top: 4rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -45,7 +44,7 @@ export const Image = styled.img`
   cursor: pointer;
   box-shadow: 0 10px 15px -5px #000;
   display: block;
-
+  transition: .3s;
   width: 320px;
   height: 200px;
   object-fit: cover;
@@ -57,5 +56,6 @@ export const Image = styled.img`
 
   &:hover {
     border: 2px solid #fff;
+    transform: scale(105%);
   }
 `;

@@ -1,5 +1,5 @@
 const URL = "https://api.themoviedb.org/3";
-const KEY = "f7b56b18c2a0160a4719505ed41e9431";
+const KEY = import.meta.env.VITE_TMDB_KEY;
 
 const apiFetch = async (endpoint: string) => {
   const response = await fetch(`${URL}${endpoint}`);

@@ -6,7 +6,7 @@ import {
   Nav,
   Logo,
   ProfileMenu,
-  Anchor
+  Anchor,
 } from "./style";
 import DisneyImg from "../../assets/disney-plus.svg";
 import HomeImg from "../../assets/home.svg";
@@ -24,12 +24,10 @@ interface Props {
 
 const Header: React.FC<Props> = ({ blueHeader }) => {
   const [show, setShow] = useState<boolean>(false);
-  const [open, setOpen] = useState<boolean>(false)
+  const [open, setOpen] = useState<boolean>(false);
 
   return (
     <HeaderContainer blueHeader={blueHeader}>
-      {console.log(open)}
-      
       <Nav>
         <List open={open}>
           <ListItem>
@@ -74,7 +72,10 @@ const Header: React.FC<Props> = ({ blueHeader }) => {
             <Anchor href="https://github.com/Gustavo-Kuhl" target="_blank">
               Github
             </Anchor>
-            <Anchor href="https://www.linkedin.com/in/gustavo-kuhl/" target="_blank">
+            <Anchor
+              href="https://www.linkedin.com/in/gustavo-kuhl/"
+              target="_blank"
+            >
               Linkedin
             </Anchor>
           </>

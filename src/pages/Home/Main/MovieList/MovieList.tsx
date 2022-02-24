@@ -1,8 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { MovieListContainer, List, ListItem, NavigateButton, ListArea } from "./style";
-
-import { MoviesContext } from "../../../../context/MoviesContext";
-
 interface Props {
   title?: string;
   items?: {
@@ -24,7 +21,6 @@ export const MovieList: React.FC<Props> = ({ title, items }) => {
 
   function handleLeftButton() {
 
-    // Pegando metade da tela para poder fazer a rolagem
     let x = scrollX + Math.round(window.innerWidth / 2);
 
     if (x > 0) {
@@ -34,8 +30,6 @@ export const MovieList: React.FC<Props> = ({ title, items }) => {
   }
 
   function handleRightButton() {
-
-    // Pegando metade da tela para poder fazer a rolagem
     let x =  scrollX - Math.round(window.innerWidth / 2);
 
     let listWidth = items!.results!.length * 367
