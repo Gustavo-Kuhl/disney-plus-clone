@@ -1,6 +1,6 @@
 # Disney plus clone
 
-[DEMO]("https://gustavokuhl-disney-plus-clone.netlify.app/")
+[DEMO](https://gustavokuhl-disney-plus-clone.netlify.app)
 
 ## Index
  * [Concept](#Concept)
